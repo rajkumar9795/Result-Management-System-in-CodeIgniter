@@ -1,0 +1,18 @@
+CRITICAL - 2026-03-24 13:18:36 --> Error: Object of class App\Models\MarksModel could not be converted to string
+[Method: GET, Route: studentresult/4]
+in APPPATH\Controllers\Home.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-24 13:19:04 --> Error: Object of class App\Models\MarksModel could not be converted to string
+[Method: GET, Route: studentresult/4]
+in APPPATH\Controllers\Home.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

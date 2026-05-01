@@ -1,0 +1,312 @@
+CRITICAL - 2026-02-16 12:35:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/courseindex.php"
+[Method: GET, Route: courseindex]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/courseindex.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/courseindex', [], true)
+ 3 APPPATH\Controllers\Admin.php(18): view('admin/courseindex', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->courseindex()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 12:40:38 --> ErrorException: Cannot redeclare App\Controllers\Admin::courseindex()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-02-16 12:40:50 --> ErrorException: Cannot redeclare App\Controllers\Admin::courseindex()
+[Method: GET, Route: courseindex]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-02-16 12:40:52 --> ErrorException: Cannot redeclare App\Controllers\Admin::courseindex()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-02-16 12:41:08 --> ErrorException: Cannot redeclare App\Controllers\Admin::courseindex()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-02-16 12:41:09 --> ErrorException: Cannot redeclare App\Controllers\Admin::courseindex()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-02-16 13:23:33 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(50): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-16 13:23:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: coursesave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(50): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:23:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(50): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:23:33 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(50): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-16 13:26:28 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(54): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-16 13:26:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: coursesave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(54): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:26:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(54): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:26:28 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (\'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(54): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:30:12 --> ErrorException: Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Admin.php on line 29.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-02-16 13:36:22 --> mysqli_sql_exception: Duplicate entry 'aa' for key 'CCode' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-16 13:36:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'aa' for key 'CCode'
+[Method: POST, Route: coursesave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:ID:, :CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:36:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'aa' for key 'CCode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (1, \'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (1, \'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:ID:, :CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 13:36:22 --> [Caused by] mysqli_sql_exception: Duplicate entry 'aa' for key 'CCode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (1, \'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (1, \'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (1, \'aa\', \'Raj Kumar\', \'3\', 1, \'2026-02-16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`ID`, `CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`) VALUES (:ID:, :CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 14:33:00 --> ErrorException: Undefined array key "RStatus"
+[Method: GET, Route: courseadd]
+in APPPATH\Views\admin\courseadd.php on line 56.
+ 1 APPPATH\Views\admin\courseadd.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "RStatus"', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\courseadd.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\courseadd.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/courseadd', [], true)
+ 5 APPPATH\Controllers\Admin.php(35): view('admin/courseadd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->courseadd()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 14:34:04 --> ErrorException: Undefined array key "RStatus"
+[Method: GET, Route: courseadd]
+in APPPATH\Views\admin\courseadd.php on line 56.
+ 1 APPPATH\Views\admin\courseadd.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "RStatus"', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\courseadd.php', 56)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\courseadd.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/courseadd', [], true)
+ 5 APPPATH\Controllers\Admin.php(35): view('admin/courseadd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->courseadd()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-16 14:44:33 --> mysqli_sql_exception: Duplicate entry 'c1' for key 'CCode' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(69): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-16 14:44:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'c1' for key 'CCode'
+[Method: POST, Route: coursesave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:, :ID:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(69): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 14:44:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'c1' for key 'CCode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (\'c1\', \'Raj Kumar\', \'1\', 1, \'2026-02-16\', 9)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (\'c1\', \'Raj Kumar\', \'1\', 1, \'2026-02-16\', 9)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:, :ID:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(69): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-16 14:44:33 --> [Caused by] mysqli_sql_exception: Duplicate entry 'c1' for key 'CCode'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (\'c1\', \'Raj Kumar\', \'1\', 1, \'2026-02-16\', 9)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (\'c1\', \'Raj Kumar\', \'1\', 1, \'2026-02-16\', 9)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (\'c1\', \'Raj Kumar\', \'1\', 1, \'2026-02-16\', 9)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `coursemaster` (`CCode`, `CName`, `Duration`, `RStatus`, `CreatedDate`, `ID`) VALUES (:CCode:, :CName:, :Duration:, :RStatus:, :CreatedDate:, :ID:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(69): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->coursesave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

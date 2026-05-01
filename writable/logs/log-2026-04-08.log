@@ -1,0 +1,445 @@
+ERROR - 2026-04-08 04:08:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'niceneat', 3306, '', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Login.php(21): CodeIgniter\BaseModel->first()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Login->LoginUser()
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Login.php(21): CodeIgniter\BaseModel->first()
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Login->LoginUser()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-04-08 04:08:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 456.
+ 1 SYSTEMPATH\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `adminmaster`
+WHERE `Username` = :Username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->LoginUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-08 06:58:23 --> mysqli_sql_exception: Duplicate entry '13-2' for key 'AdmissionID' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `re...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(324): CodeIgniter\Model->insert(Array)
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-04-08 06:58:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '13-2' for key 'AdmissionID'
+[Method: POST, Route: resultsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(324): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 06:58:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '13-2' for key 'AdmissionID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'13\', 2, \'2026-04-08 06:58:22\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'13\', 2, \'2026-04-08 06:58:22\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(324): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 06:58:23 --> [Caused by] mysqli_sql_exception: Duplicate entry '13-2' for key 'AdmissionID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'13\', 2, \'2026-04-08 06:58:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'13\', 2, \'2026-04-08 06:58:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'13\', 2, \'2026-04-08 06:58:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(324): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 07:58:34 --> ErrorException: Array to string conversion
+[Method: GET, Route: marksheetadmin/202602006/2]
+in APPPATH\Controllers\Admin.php on line 575.
+ 1 APPPATH\Controllers\Admin.php(575): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 575)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 09:04:39 --> ErrorException: Undefined variable $CurrentMaxMarks
+[Method: GET, Route: marksheetadmin/202602006/2]
+in APPPATH\Views\admin\resultadmin.php on line 269.
+ 1 APPPATH\Views\admin\resultadmin.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CurrentMaxMarks', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php', 269)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/resultadmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(596): view('admin/resultadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 09:06:25 --> ErrorException: Undefined variable $CurrentMaxMarks
+[Method: GET, Route: marksheetadmin/202602006/1]
+in APPPATH\Views\admin\resultadmin.php on line 262.
+ 1 APPPATH\Views\admin\resultadmin.php(262): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CurrentMaxMarks', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php', 262)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/resultadmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(594): view('admin/resultadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 09:58:27 --> ErrorException: Undefined variable $CurrentMaxMarks
+[Method: GET, Route: marksheetadmin/202602006/2]
+in APPPATH\Views\admin\resultadmin.php on line 270.
+ 1 APPPATH\Views\admin\resultadmin.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CurrentMaxMarks', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php', 270)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/resultadmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(589): view('admin/resultadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 10:16:59 --> ErrorException: Undefined variable $60
+[Method: GET, Route: marksheetadmin/202602006/1]
+in APPPATH\Views\admin\resultadmin.php on line 313.
+ 1 APPPATH\Views\admin\resultadmin.php(313): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $60', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php', 313)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/resultadmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(589): view('admin/resultadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 10:21:09 --> ErrorException: Undefined variable $grandobtain
+[Method: GET, Route: marksheetadmin/202602006/2]
+in APPPATH\Views\admin\resultadmin.php on line 287.
+ 1 APPPATH\Views\admin\resultadmin.php(287): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grandobtain', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php', 287)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/resultadmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(589): view('admin/resultadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:28:11 --> ErrorException: Undefined variable $sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Controllers\Admin.php on line 595.
+ 1 APPPATH\Controllers\Admin.php(595): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 595)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:28:39 --> ErrorException: Undefined variable $sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Controllers\Admin.php on line 612.
+ 1 APPPATH\Controllers\Admin.php(612): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 612)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:29:49 --> ErrorException: Undefined variable $sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Controllers\Admin.php on line 612.
+ 1 APPPATH\Controllers\Admin.php(612): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 612)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:30:07 --> ErrorException: Undefined variable $result
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 90.
+ 1 APPPATH\Views\admin\diploma.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 90)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:30:24 --> ErrorException: Undefined variable $totalmarks
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 117.
+ 1 APPPATH\Views\admin\diploma.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalmarks', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 117)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:30:44 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 117.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 3 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:30:50 --> ErrorException: Undefined variable $Sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 160.
+ 1 APPPATH\Views\admin\diploma.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 160)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:31:11 --> ErrorException: Undefined variable $Sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 163.
+ 1 APPPATH\Views\admin\diploma.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 163)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:31:19 --> ErrorException: Undefined variable $grandtotal
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 166.
+ 1 APPPATH\Views\admin\diploma.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grandtotal', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 166)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:31:31 --> ErrorException: Undefined variable $grandtotal
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 170.
+ 1 APPPATH\Views\admin\diploma.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grandtotal', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 170)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:31:40 --> ErrorException: Undefined variable $grandtotal
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 174.
+ 1 APPPATH\Views\admin\diploma.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $grandtotal', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 174)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:31:50 --> ErrorException: Undefined variable $Sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 182.
+ 1 APPPATH\Views\admin\diploma.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 182)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 13:32:03 --> ErrorException: Undefined variable $Sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 185.
+ 1 APPPATH\Views\admin\diploma.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 185)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 14:13:28 --> ErrorException: Undefined array key "DOB"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 95.
+ 1 APPPATH\Views\admin\diploma.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DOB"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 95)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 14:13:35 --> ErrorException: Undefined array key "DOB"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 95.
+ 1 APPPATH\Views\admin\diploma.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DOB"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 95)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 14:24:12 --> ErrorException: Undefined array key "CCode"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 131.
+ 1 APPPATH\Views\admin\diploma.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "CCode"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 131)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 14:26:10 --> ErrorException: Undefined array key "Duration"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 135.
+ 1 APPPATH\Views\admin\diploma.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Duration"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 135)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(617): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 15:56:20 --> ErrorException: Undefined variable $sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Controllers\Admin.php on line 618.
+ 1 APPPATH\Controllers\Admin.php(618): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 618)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 15:56:39 --> ErrorException: Undefined variable $sem
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Controllers\Admin.php on line 601.
+ 1 APPPATH\Controllers\Admin.php(601): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sem', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 601)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-08 15:57:53 --> ArgumentCountError: Too few arguments to function App\Controllers\Admin::marksheetadmin(), 1 passed in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php on line 933 and exactly 2 expected
+[Method: GET, Route: marksheetadmin/2604001/2]
+in APPPATH\Controllers\Admin.php on line 547.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('2604001')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

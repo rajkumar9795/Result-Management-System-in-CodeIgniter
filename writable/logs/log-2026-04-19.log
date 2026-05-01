@@ -1,0 +1,76 @@
+CRITICAL - 2026-04-19 04:18:08 --> CodeIgniter\Session\Exceptions\SessionException: Session: Configured save path "D:\xamp\htdocs\www\Education\resultniceneatcomputer\writable\session" is not writable by the PHP process.
+[Method: GET, Route: jskjhdUjsa65]
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 103.
+ 1 SYSTEMPATH\Session\Handlers\FileHandler.php(103): CodeIgniter\Session\Exceptions\SessionException::forWriteProtectedSavePath('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\writable\\session')
+ 2 [internal function]: CodeIgniter\Session\Handlers\FileHandler->open('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\writable\\session', 'ci_session')
+ 3 SYSTEMPATH\Session\Session.php(920): session_start()
+ 4 SYSTEMPATH\Session\Session.php(242): CodeIgniter\Session\Session->startSession()
+ 5 SYSTEMPATH\Config\Services.php(701): CodeIgniter\Session\Session->start()
+ 6 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 7 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 8 SYSTEMPATH\Config\Services.php(666): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 9 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::session()
+10 SYSTEMPATH\Config\BaseService.php(201): CodeIgniter\Config\BaseService::__callStatic('session', [])
+11 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('session')
+12 SYSTEMPATH\Common.php(971): service('session')
+13 APPPATH\Views\adminlogin.php(54): session()
+14 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\adminlogin.php')
+15 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+16 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('adminlogin', [], true)
+17 APPPATH\Controllers\Home.php(18): view('adminlogin', [...])
+18 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->adminlogin()
+19 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+20 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+21 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+23 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-19 04:20:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'niceneat', 3306, '', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Login.php(21): CodeIgniter\BaseModel->first()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Login->LoginUser()
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Login.php(21): CodeIgniter\BaseModel->first()
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Login->LoginUser()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-04-19 04:20:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 456.
+ 1 SYSTEMPATH\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `adminmaster`
+WHERE `Username` = :Username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->LoginUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

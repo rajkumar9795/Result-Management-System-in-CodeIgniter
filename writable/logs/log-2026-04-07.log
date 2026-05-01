@@ -1,0 +1,166 @@
+CRITICAL - 2026-04-07 08:27:30 --> ErrorException: Undefined variable $stu
+[Method: GET, Route: marksheetadmin/20]
+in APPPATH\Views\admin\resultadmin.php on line 84.
+ 1 APPPATH\Views\admin\resultadmin.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stu', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php', 84)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\resultadmin.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/resultadmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(550): view('admin/resultadmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('20')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-07 08:28:13 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: marksheetadmin/20]
+in APPPATH\Controllers\Admin.php on line 560.
+ 1 APPPATH\Controllers\Admin.php(560): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 560)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('20')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-07 09:00:36 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: marksheetadmin/202602006]
+in APPPATH\Controllers\Admin.php on line 560.
+ 1 APPPATH\Controllers\Admin.php(560): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 560)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-07 16:11:22 --> mysqli_sql_exception: Unknown column 'ResultID' in 'where clause' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `re...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-04-07 16:11:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'ResultID' in 'where clause'
+[Method: GET, Route: delmarksentry/20/202602006]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `result`
+WHERE `ResultID` = :ResultID:', [...], false)
+ 2 SYSTEMPATH\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1155): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-07 16:11:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'ResultID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `result`
+WHERE `ResultID` = :ResultID:', [...], false)
+ 4 SYSTEMPATH\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1155): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-07 16:11:22 --> [Caused by] mysqli_sql_exception: Unknown column 'ResultID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `result`
+WHERE `ResultID` = \'20\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `result`
+WHERE `ResultID` = :ResultID:', [...], false)
+ 5 SYSTEMPATH\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1155): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-07 16:12:38 --> mysqli_sql_exception: Unknown column 'ResultID' in 'where clause' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `re...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-04-07 16:12:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'ResultID' in 'where clause'
+[Method: GET, Route: delmarksentry/20/202602006]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `result`
+WHERE `ResultID` = :ResultID:', [...], false)
+ 2 SYSTEMPATH\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1155): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-07 16:12:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'ResultID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `result`
+WHERE `ResultID` = :ResultID:', [...], false)
+ 4 SYSTEMPATH\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1155): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-07 16:12:38 --> [Caused by] mysqli_sql_exception: Unknown column 'ResultID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `result`
+WHERE `ResultID` = \'20\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `result`
+WHERE `ResultID` = \'20\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `result`
+WHERE `ResultID` = :ResultID:', [...], false)
+ 5 SYSTEMPATH\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1155): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Admin.php(576): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->delmarksentry('20', '202602006')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

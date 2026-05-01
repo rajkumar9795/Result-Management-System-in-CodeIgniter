@@ -1,0 +1,134 @@
+CRITICAL - 2026-03-22 14:10:36 --> ErrorException: Undefined variable $stu
+[Method: POST, Route: getmarksheet]
+in APPPATH\Views\resultindex.php on line 69.
+ 1 APPPATH\Views\resultindex.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stu', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultindex.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultindex.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('resultindex', [], true)
+ 5 APPPATH\Controllers\Home.php(75): view('resultindex', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:50:09 --> ErrorException: Undefined variable $stu
+[Method: GET, Route: studentresult]
+in APPPATH\Views\result.php on line 69.
+ 1 APPPATH\Views\result.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stu', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(23): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:53:36 --> ErrorException: Undefined variable $stu
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\result.php on line 69.
+ 1 APPPATH\Views\result.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stu', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(23): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:55:24 --> ErrorException: Undefined variable $4
+[Method: GET, Route: studentresult/4]
+in APPPATH\Controllers\Home.php on line 24.
+ 1 APPPATH\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $4', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Home.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:55:40 --> ErrorException: Undefined variable $stu
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\result.php on line 69.
+ 1 APPPATH\Views\result.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stu', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(26): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:55:58 --> ErrorException: Undefined variable $admission
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\result.php on line 72.
+ 1 APPPATH\Views\result.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admission', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 72)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(26): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:58:46 --> Error: Cannot use object of type App\Models\AdmissionModel as array
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\result.php on line 72.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 4 APPPATH\Controllers\Home.php(31): view('result', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:58:49 --> Error: Cannot use object of type App\Models\AdmissionModel as array
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\result.php on line 72.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 4 APPPATH\Controllers\Home.php(31): view('result', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 14:59:20 --> ErrorException: Undefined variable $result
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\result.php on line 75.
+ 1 APPPATH\Views\result.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 75)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(32): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-22 15:09:45 --> ErrorException: Undefined variable $stu
+[Method: POST, Route: getmarksheet]
+in APPPATH\Views\resultindex.php on line 31.
+ 1 APPPATH\Views\resultindex.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $stu', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultindex.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultindex.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('resultindex', [], true)
+ 5 APPPATH\Controllers\Home.php(97): view('resultindex', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,305 @@
+ERROR - 2026-02-22 03:53:34 --> mysqli_sql_exception: Duplicate entry '' for key 'RegNo' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `student...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(214): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-22 03:53:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'RegNo'
+[Method: POST, Route: studentsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 03:53:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'RegNo'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student` SET `ID` = \'2\', `RegNo` = NULL, `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:53:34\'
+WHERE `student`.`ID` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student` SET `ID` = \'2\', `RegNo` = NULL, `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:53:34\'
+WHERE `student`.`ID` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 03:53:34 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'RegNo'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `student` SET `ID` = \'2\', `RegNo` = NULL, `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:53:34\'
+WHERE `student`.`ID` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student` SET `ID` = \'2\', `RegNo` = NULL, `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:53:34\'
+WHERE `student`.`ID` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student` SET `ID` = \'2\', `RegNo` = NULL, `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:53:34\'
+WHERE `student`.`ID` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-22 03:56:26 --> mysqli_sql_exception: Duplicate entry '' for key 'RegNo' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `student...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(214): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-22 03:56:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'RegNo'
+[Method: POST, Route: studentsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 03:56:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'RegNo'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:26\'
+WHERE `student`.`ID` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:26\'
+WHERE `student`.`ID` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 03:56:26 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'RegNo'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:26\'
+WHERE `student`.`ID` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:26\'
+WHERE `student`.`ID` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:26\'
+WHERE `student`.`ID` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-22 03:56:56 --> mysqli_sql_exception: Duplicate entry '' for key 'RegNo' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `student...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(214): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-22 03:56:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'RegNo'
+[Method: POST, Route: studentsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 03:56:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'RegNo'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:56\'
+WHERE `student`.`ID` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:56\'
+WHERE `student`.`ID` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 03:56:56 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'RegNo'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:56\'
+WHERE `student`.`ID` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:56\'
+WHERE `student`.`ID` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `student` SET `ID` = \'2\', `RegNo` = \'\', `Name` = \'test edit edi2\', `FName` = \'Raj\', `MName` = \'\', `Phone` = \'2222222222\', `Whatsapp` = \'\', `Email` = \'\', `DOB` = \'2026-02-26\', `Address` = \'Sh 19/48 R-1\\r\\ncentral jail road\', `CreatedDate` = \'2026-02-22 03:56:56\'
+WHERE `student`.`ID` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `student` SET `ID` = :ID:, `RegNo` = :RegNo:, `Name` = :Name:, `FName` = :FName:, `MName` = :MName:, `Phone` = :Phone:, `Whatsapp` = :Whatsapp:, `Email` = :Email:, `DOB` = :DOB:, `Address` = :Address:, `CreatedDate` = :CreatedDate:
+WHERE `student`.`ID` IN :student.ID:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(214): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 10:46:56 --> ArgumentCountError: Too few arguments to function App\Controllers\Admin::result(), 0 passed in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: result]
+in APPPATH\Controllers\Admin.php on line 278.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->result()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-22 11:12:16 --> mysqli_sql_exception: Unknown column 'a.ID' in 'field list' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `a`.`ID`...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`ID`...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`ID`...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`ID`...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(918): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(278): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-02-22 11:12:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.ID' in 'field list'
+[Method: GET, Route: admissionlist/202602001]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(918): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(278): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 11:12:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.ID' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(918): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(278): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-22 11:12:16 --> [Caused by] mysqli_sql_exception: Unknown column 'a.ID' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `admission`
+JOIN `student` `s` ON `s`.`ID` = `a`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `a`.`CourseID`
+WHERE `s`.`RegNo` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(918): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(278): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

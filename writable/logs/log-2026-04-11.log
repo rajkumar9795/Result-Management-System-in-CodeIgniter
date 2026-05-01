@@ -1,0 +1,24 @@
+CRITICAL - 2026-04-11 03:30:21 --> ErrorException: Undefined array key "course_name"
+[Method: POST, Route: getsinglestu]
+in APPPATH\Views\admin\admissionindex.php on line 134.
+ 1 APPPATH\Views\admin\admissionindex.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "course_name"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\admissionindex.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\admissionindex.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/admissionindex', [], true)
+ 5 APPPATH\Controllers\Admin.php(269): view('admin/admissionindex', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->getsinglestu()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-11 03:38:51 --> ErrorException: Undefined array key "course_name"
+[Method: POST, Route: getsinglestu]
+in APPPATH\Controllers\Admin.php on line 270.
+ 1 APPPATH\Controllers\Admin.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "course_name"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 270)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->getsinglestu()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

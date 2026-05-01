@@ -1,0 +1,99 @@
+CRITICAL - 2026-03-13 11:38:44 --> ErrorException: Undefined variable $aid
+[Method: POST, Route: getmarksheet]
+in APPPATH\Views\result.php on line 17.
+ 1 APPPATH\Views\result.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aid', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 11:51:00 --> CodeIgniter\Images\Exceptions\ImageException: The framework needs the following extension(s) installed and loaded: "GD".
+[Method: POST, Route: studentsave]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 78.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(36): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(349): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(340): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::image()
+ 7 APPPATH\Controllers\Admin.php(207): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 11:53:30 --> CodeIgniter\Images\Exceptions\ImageException: The framework needs the following extension(s) installed and loaded: "GD".
+[Method: POST, Route: studentsave]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 78.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(36): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+ 2 SYSTEMPATH\Config\Services.php(349): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+ 3 SYSTEMPATH\Config\BaseService.php(311): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+ 4 SYSTEMPATH\Config\BaseService.php(250): CodeIgniter\Config\BaseService::__callStatic('image', [...])
+ 5 SYSTEMPATH\Config\Services.php(340): CodeIgniter\Config\BaseService::getSharedInstance('image', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(320): CodeIgniter\Config\Services::image()
+ 7 APPPATH\Controllers\Admin.php(207): CodeIgniter\Config\BaseService::__callStatic('image', [])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 12:01:16 --> Error: Class "App\Controllers\ResultModel" not found
+[Method: POST, Route: getmarksheet]
+in APPPATH\Controllers\Home.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 12:53:19 --> ErrorException: Undefined array key "ID"
+[Method: POST, Route: getmarksheet]
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ID"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Home.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 12:55:38 --> ErrorException: Undefined array key "ID"
+[Method: POST, Route: getmarksheet]
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ID"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Home.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 13:30:28 --> ErrorException: Undefined variable $admisssionid
+[Method: POST, Route: getmarksheet]
+in APPPATH\Controllers\Home.php on line 38.
+ 1 APPPATH\Controllers\Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admisssionid', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Home.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-13 13:32:01 --> ErrorException: Array to string conversion
+[Method: POST, Route: getmarksheet]
+in APPPATH\Views\result.php on line 18.
+ 1 APPPATH\Views\result.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(50): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

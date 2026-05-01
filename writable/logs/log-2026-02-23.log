@@ -1,0 +1,1042 @@
+ERROR - 2026-02-23 04:05:12 --> mysqli_sql_exception: Unknown column 'admission.ID' in 'field list' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `admissi...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `admissi...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `admissi...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `admissi...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(280): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-02-23 04:05:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'admission.ID' in 'field list'
+[Method: GET, Route: admissionlist/202602001]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = :s.RegNo:', [...], false)
+ 2 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(280): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 04:05:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'admission.ID' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = \'202602001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = \'202602001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = :s.RegNo:', [...], false)
+ 4 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(280): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 04:05:12 --> [Caused by] mysqli_sql_exception: Unknown column 'admission.ID' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = \'202602001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = \'202602001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = \'202602001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `admission`.`ID`, `s`.`RegNo`, `s`.`Name` as `StudentName`, `c`.`CName` as `CourseName`
+FROM `student`
+JOIN `student` `s` ON `s`.`ID` = `admission`.`StuID`
+JOIN `coursemaster` `c` ON `c`.`ID` = `admission`.`CourseID`
+WHERE `s`.`RegNo` = :s.RegNo:', [...], false)
+ 5 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(280): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 05:04:40 --> ErrorException: Undefined variable $tudent
+[Method: GET, Route: admissionlist/202602001]
+in APPPATH\Views\admin\admissionlist.php on line 26.
+ 1 APPPATH\Views\admin\admissionlist.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tudent', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\admissionlist.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\admissionlist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/admissionlist', [], true)
+ 5 APPPATH\Controllers\Admin.php(281): view('admin/admissionlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602001')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 07:51:55 --> mysqli_sql_exception: Duplicate entry '8-1' for key 'AdmissionID' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(311): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-23 07:51:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '8-1' for key 'AdmissionID'
+[Method: POST, Route: resultsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(311): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 07:51:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '8-1' for key 'AdmissionID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', \'1\', \'2026-02-23 07:51:55\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', \'1\', \'2026-02-23 07:51:55\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(311): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 07:51:55 --> [Caused by] mysqli_sql_exception: Duplicate entry '8-1' for key 'AdmissionID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', \'1\', \'2026-02-23 07:51:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', \'1\', \'2026-02-23 07:51:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', \'1\', \'2026-02-23 07:51:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(311): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:10:40 --> ErrorException: Undefined variable $dmissionId
+[Method: GET, Route: getresultlist/8]
+in APPPATH\Controllers\Admin.php on line 343.
+ 1 APPPATH\Controllers\Admin.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dmissionId', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Controllers\\Admin.php', 343)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->getResultList('8')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 09:23:17 --> mysqli_sql_exception: Unknown column 'CourseID' in 'where clause' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-02-23 09:23:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'CourseID' in 'where clause'
+[Method: GET, Route: marksentry/8/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = :CourseID:
+ORDER BY `Sequence` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:23:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'CourseID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = :CourseID:
+ORDER BY `Sequence` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:23:17 --> [Caused by] mysqli_sql_exception: Unknown column 'CourseID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = :CourseID:
+ORDER BY `Sequence` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 09:24:25 --> mysqli_sql_exception: Unknown column 'CourseID' in 'where clause' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-02-23 09:24:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'CourseID' in 'where clause'
+[Method: GET, Route: marksentry/8/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = :CourseID:
+ORDER BY `Sequence` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:24:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'CourseID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = :CourseID:
+ORDER BY `Sequence` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:24:25 --> [Caused by] mysqli_sql_exception: Unknown column 'CourseID' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CourseID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CourseID` = :CourseID:
+ORDER BY `Sequence` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 09:30:39 --> mysqli_sql_exception: Unknown column 'Sequence' in 'order clause' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-02-23 09:30:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Sequence' in 'order clause'
+[Method: GET, Route: marksentry/8/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CID` = :CID:
+ORDER BY `Sequence` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:30:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Sequence' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CID` = :CID:
+ORDER BY `Sequence` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:30:39 --> [Caused by] mysqli_sql_exception: Unknown column 'Sequence' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+ORDER BY `Sequence` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+ORDER BY `Sequence` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CID` = :CID:
+ORDER BY `Sequence` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(385): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:31:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/marksentry.php"
+[Method: GET, Route: marksentry/8/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/marksentry.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/marksentry', [], true)
+ 3 APPPATH\Controllers\Admin.php(388): view('admin/marksentry', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:31:47 --> ErrorException: Undefined variable $title
+[Method: GET, Route: marksentry/8/1]
+in APPPATH\Views\admin\shared\layout.php on line 8.
+ 1 APPPATH\Views\admin\shared\layout.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\shared\\layout.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\shared\\layout.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('admin/shared/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/markentry', [], true)
+ 6 APPPATH\Controllers\Admin.php(388): view('admin/markentry', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:33:31 --> ErrorException: Undefined array key "SubjectName"
+[Method: GET, Route: marksentry/8/1]
+in APPPATH\Views\admin\markentry.php on line 57.
+ 1 APPPATH\Views\admin\markentry.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "SubjectName"', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/markentry', [], true)
+ 5 APPPATH\Controllers\Admin.php(389): view('admin/markentry', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:34:40 --> ErrorException: Undefined array key "Sequence"
+[Method: GET, Route: marksentry/8/1]
+in APPPATH\Views\admin\markentry.php on line 59.
+ 1 APPPATH\Views\admin\markentry.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Sequence"', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php', 59)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/markentry', [], true)
+ 5 APPPATH\Controllers\Admin.php(389): view('admin/markentry', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:35:08 --> ErrorException: Undefined array key "MaxMarks"
+[Method: GET, Route: marksentry/8/1]
+in APPPATH\Views\admin\markentry.php on line 62.
+ 1 APPPATH\Views\admin\markentry.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "MaxMarks"', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/markentry', [], true)
+ 5 APPPATH\Controllers\Admin.php(389): view('admin/markentry', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 09:50:14 --> mysqli_sql_exception: Duplicate entry '2-7' for key 'StuID' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ad...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(264): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->saveadmission()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-23 09:50:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-7' for key 'StuID'
+[Method: POST, Route: saveadmission]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (:StuID:, :CourseID:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(264): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->saveadmission()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:50:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-7' for key 'StuID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (\'2\', \'7\', \'2026-02-23 09:50:14\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (\'2\', \'7\', \'2026-02-23 09:50:14\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (:StuID:, :CourseID:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(264): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->saveadmission()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 09:50:14 --> [Caused by] mysqli_sql_exception: Duplicate entry '2-7' for key 'StuID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (\'2\', \'7\', \'2026-02-23 09:50:14\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (\'2\', \'7\', \'2026-02-23 09:50:14\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (\'2\', \'7\', \'2026-02-23 09:50:14\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admission` (`StuID`, `CourseID`, `CreatedDate`) VALUES (:StuID:, :CourseID:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(264): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->saveadmission()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 12:00:33 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admissionlist/11]
+in APPPATH\Views\admin\admissionlist.php on line 36.
+ 1 APPPATH\Views\admin\admissionlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\admissionlist.php', 36)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\admissionlist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/admissionlist', [], true)
+ 5 APPPATH\Controllers\Admin.php(283): view('admin/admissionlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('11')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 12:04:24 --> ParseError: syntax error, unexpected token ")"
+[Method: GET, Route: result]
+in APPPATH\Controllers\Admin.php on line 307.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 12:43:39 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:43:39 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(417): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:43:39 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(417): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:43:39 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(417): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:48:25 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:48:25 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(417): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:48:25 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(417): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:48:25 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(417): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:52:36 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:54:03 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:55:06 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:55:54 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:55:54 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:55:54 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:55:54 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 12:57:27 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 12:58:30 --> mysqli_sql_exception: Table 'niceneat.marks' doesn't exist in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(509): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(1155): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(406): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2026-02-23 13:01:54 --> mysqli_sql_exception: Unknown column 'MaxMarks' in 'field list' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 13:01:54 --> mysqli_sql_exception: Unknown column 'MaxMarks' in 'field list' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 13:01:54 --> mysqli_sql_exception: Unknown column 'MaxMarks' in 'field list' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-02-23 13:03:43 --> mysqli_sql_exception: Unknown column 'MaxMarks' in 'field list' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(418): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->markssave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-23 13:50:49 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: marksentry/8/1]
+in APPPATH\Views\admin\markentry.php on line 142.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/markentry', [], true)
+ 3 APPPATH\Controllers\Admin.php(395): view('admin/markentry', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 14:16:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/marksentry.php"
+[Method: GET, Route: marksedit/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/marksentry.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/marksentry', [], true)
+ 3 APPPATH\Controllers\Admin.php(446): view('admin/marksentry', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksedit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 15:24:21 --> ErrorException: Undefined array key "SName"
+[Method: GET, Route: marksentry/8/1]
+in APPPATH\Views\admin\markentry.php on line 61.
+ 1 APPPATH\Views\admin\markentry.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "SName"', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php', 61)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\markentry.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/markentry', [], true)
+ 5 APPPATH\Controllers\Admin.php(401): view('admin/markentry', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('8', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-02-23 15:28:16 --> mysqli_sql_exception: Duplicate entry '8-1' for key 'AdmissionID' in C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Model.php(790): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\app\Controllers\Admin.php(316): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+#9 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\wwwc\education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-02-23 15:28:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '8-1' for key 'AdmissionID'
+[Method: POST, Route: resultsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 2 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin.php(316): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 15:28:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '8-1' for key 'AdmissionID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', 1, \'2026-02-23 15:28:16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', 1, \'2026-02-23 15:28:16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 4 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin.php(316): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 15:28:16 --> [Caused by] mysqli_sql_exception: Duplicate entry '8-1' for key 'AdmissionID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', 1, \'2026-02-23 15:28:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', 1, \'2026-02-23 15:28:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (\'8\', 1, \'2026-02-23 15:28:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `result` (`AdmissionID`, `Sem`, `CreatedDate`) VALUES (:AdmissionID:, :Sem:, :CreatedDate:)', [...], false)
+ 5 SYSTEMPATH\Model.php(382): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(790): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(316): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->resultsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-23 16:14:45 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admissionlist/202602002]
+in APPPATH\Views\admin\admissionlist.php on line 36.
+ 1 APPPATH\Views\admin\admissionlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\admissionlist.php', 36)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\admissionlist.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/admissionlist', [], true)
+ 5 APPPATH\Controllers\Admin.php(284): view('admin/admissionlist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionlist('202602002')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,194 @@
+CRITICAL - 2026-04-09 09:24:53 --> ErrorException: Undefined variable $Percentage
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 136.
+ 1 APPPATH\Views\admin\diploma.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Percentage', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 136)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(641): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:26:41 --> ArgumentCountError: Too few arguments to function App\Controllers\Admin::marksheetadmin(), 1 passed in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php on line 933 and exactly 2 expected
+[Method: GET, Route: marksheetadmin/202602006/2]
+in APPPATH\Controllers\Admin.php on line 547.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksheetadmin('202602006')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:32:44 --> ErrorException: Undefined variable $Grade
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 138.
+ 1 APPPATH\Views\admin\diploma.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Grade', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 138)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(641): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:32:51 --> Error: Call to undefined function App\Controllers\getGrade()
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:35:28 --> ErrorException: Undefined variable $Grade
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 138.
+ 1 APPPATH\Views\admin\diploma.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Grade', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 138)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(657): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:35:36 --> ErrorException: Undefined variable $Grade
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 138.
+ 1 APPPATH\Views\admin\diploma.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Grade', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 138)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(657): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:35:37 --> ErrorException: Undefined variable $Grade
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 138.
+ 1 APPPATH\Views\admin\diploma.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Grade', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 138)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(657): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:49:01 --> ErrorException: Undefined array key "EndDate"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 141.
+ 1 APPPATH\Views\admin\diploma.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "EndDate"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 141)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(657): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:49:07 --> ErrorException: Undefined array key "EndDate"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 141.
+ 1 APPPATH\Views\admin\diploma.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "EndDate"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 141)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(661): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:49:09 --> ErrorException: Undefined array key "EndDate"
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 141.
+ 1 APPPATH\Views\admin\diploma.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "EndDate"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 141)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(661): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 09:49:49 --> ParseError: Unclosed '(' does not match ']'
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 141.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 3 APPPATH\Controllers\Admin.php(661): view('admin/diploma', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 10:12:34 --> ErrorException: Undefined variable $CreatedDate
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 151.
+ 1 APPPATH\Views\admin\diploma.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $CreatedDate', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 151)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(658): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 12:58:22 --> ErrorException: Undefined array key "EndDate"
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\resultuser.php on line 83.
+ 1 APPPATH\Views\resultuser.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "EndDate"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultuser.php', 83)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultuser.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('resultuser', [], true)
+ 5 APPPATH\Controllers\Home.php(42): view('resultuser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 12:58:29 --> ErrorException: Undefined array key "Duration"
+[Method: GET, Route: studentresult/4]
+in APPPATH\Controllers\Home.php on line 42.
+ 1 APPPATH\Controllers\Home.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Duration"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Controllers\\Home.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-09 12:59:08 --> ErrorException: Undefined array key "EndDate"
+[Method: GET, Route: studentresult/4]
+in APPPATH\Views\resultuser.php on line 83.
+ 1 APPPATH\Views\resultuser.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "EndDate"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultuser.php', 83)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\resultuser.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('resultuser', [], true)
+ 5 APPPATH\Controllers\Home.php(46): view('resultuser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->result('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

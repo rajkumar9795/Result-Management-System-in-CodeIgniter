@@ -1,0 +1,50 @@
+CRITICAL - 2026-02-20 07:48:23 --> CodeIgniter\Images\Exceptions\ImageException: Unable to save the image. Please make sure the image and file directory are writable.
+[Method: POST, Route: studentsave]
+in SYSTEMPATH\Images\Handlers\GDHandler.php on line 256.
+ 1 SYSTEMPATH\Images\Handlers\GDHandler.php(256): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+ 2 APPPATH\Controllers\Admin.php(196): CodeIgniter\Images\Handlers\GDHandler->save('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\public\\uploads/stupic/2.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentsave()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-20 08:11:24 --> ErrorException: Undefined variable $title
+[Method: GET, Route: studentedit/2]
+in APPPATH\Views\admin\shared\layout.php on line 8.
+ 1 APPPATH\Views\admin\shared\layout.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\shared\\layout.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Views\\admin\\shared\\layout.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('admin/shared/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/studentadd', [], true)
+ 6 APPPATH\Controllers\Admin.php(233): view('admin/studentadd', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentedit('2')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-20 14:28:01 --> ParseError: Unmatched '}'
+[Method: GET, Route: studentindex]
+in APPPATH\Models\StudentModel.php on line 59.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\wwwc\\education\\resultniceneatcomputer\\app\\Models\\StudentModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\StudentModel')
+ 3 APPPATH\Controllers\Admin.php(146): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\StudentModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->studentindex()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-02-20 15:13:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/admissionindex.php"
+[Method: GET, Route: admissionindex]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/admissionindex.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/admissionindex', [], true)
+ 3 APPPATH\Controllers\Admin.php(233): view('admin/admissionindex', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->admissionindex()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,0 +1,14 @@
+CRITICAL - 2026-04-10 10:10:59 --> ErrorException: Undefined variable $ResultID
+[Method: GET, Route: diploma/202602006]
+in APPPATH\Views\admin\diploma.php on line 98.
+ 1 APPPATH\Views\admin\diploma.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ResultID', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php', 98)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\diploma.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/diploma', [], true)
+ 5 APPPATH\Controllers\Admin.php(658): view('admin/diploma', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->diploma('202602006', '')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

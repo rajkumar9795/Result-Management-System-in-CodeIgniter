@@ -1,0 +1,469 @@
+CRITICAL - 2026-03-12 09:03:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "studentresult.php"
+[Method: POST, Route: getmarksheet]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('studentresult.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('studentresult', [], true)
+ 3 APPPATH\Controllers\Home.php(40): view('studentresult', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-12 09:15:58 --> mysqli_sql_exception: Unknown column 'RStatus' in 'where clause' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(402): CodeIgniter\BaseModel->findAll()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->marksentry('13', '20')
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-03-12 09:15:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'RStatus' in 'where clause'
+[Method: GET, Route: marksentry/13/20]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CID` = :CID:
+AND `RStatus` = :RStatus:
+ORDER BY `SeqNo` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin.php(402): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('13', '20')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:15:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'RStatus' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+AND `RStatus` = 1
+ORDER BY `SeqNo` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+AND `RStatus` = 1
+ORDER BY `SeqNo` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CID` = :CID:
+AND `RStatus` = :RStatus:
+ORDER BY `SeqNo` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin.php(402): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('13', '20')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:15:58 --> [Caused by] mysqli_sql_exception: Unknown column 'RStatus' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+AND `RStatus` = 1
+ORDER BY `SeqNo` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+AND `RStatus` = 1
+ORDER BY `SeqNo` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subject`
+WHERE `CID` = \'7\'
+AND `RStatus` = 1
+ORDER BY `SeqNo` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subject`
+WHERE `CID` = :CID:
+AND `RStatus` = :RStatus:
+ORDER BY `SeqNo` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(402): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->marksentry('13', '20')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:18:09 --> ErrorException: Undefined array key "RStatus"
+[Method: GET, Route: subjectedit/4]
+in APPPATH\Views\admin\subjectadd.php on line 109.
+ 1 APPPATH\Views\admin\subjectadd.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "RStatus"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\subjectadd.php', 109)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\subjectadd.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/subjectadd', [], true)
+ 5 APPPATH\Controllers\Admin.php(99): view('admin/subjectadd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectadd('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:18:20 --> ErrorException: Undefined array key "RStatus"
+[Method: GET, Route: subjectedit/7]
+in APPPATH\Views\admin\subjectadd.php on line 109.
+ 1 APPPATH\Views\admin\subjectadd.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "RStatus"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\subjectadd.php', 109)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\subjectadd.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/subjectadd', [], true)
+ 5 APPPATH\Controllers\Admin.php(99): view('admin/subjectadd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectadd('7')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:18:50 --> ErrorException: Undefined array key "RStatus"
+[Method: GET, Route: subjectedit/4]
+in APPPATH\Views\admin\subjectadd.php on line 109.
+ 1 APPPATH\Views\admin\subjectadd.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "RStatus"', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\subjectadd.php', 109)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\admin\\subjectadd.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/subjectadd', [], true)
+ 5 APPPATH\Controllers\Admin.php(99): view('admin/subjectadd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectadd('4')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-12 09:19:14 --> mysqli_sql_exception: Unknown column 'MaxPracMark' in 'field list' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `subject...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(120): CodeIgniter\Model->update('4', Array)
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-03-12 09:19:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MaxPracMark' in 'field list'
+[Method: POST, Route: subjectsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:19:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MaxPracMark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:19:14 --> [Caused by] mysqli_sql_exception: Unknown column 'MaxPracMark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-12 09:29:14 --> mysqli_sql_exception: Unknown column 'MaxPracMark' in 'field list' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `subject...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(120): CodeIgniter\Model->update('4', Array)
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-03-12 09:29:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MaxPracMark' in 'field list'
+[Method: POST, Route: subjectsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:29:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MaxPracMark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:29:14 --> [Caused by] mysqli_sql_exception: Unknown column 'MaxPracMark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-12 09:29:35 --> mysqli_sql_exception: Unknown column 'MaxPracMark' in 'field list' in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `subject...', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject...')
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject...')
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(120): CodeIgniter\Model->update('4', Array)
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2026-03-12 09:29:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MaxPracMark' in 'field list'
+[Method: POST, Route: subjectsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 675.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 2 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:29:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'MaxPracMark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 4 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:29:35 --> [Caused by] mysqli_sql_exception: Unknown column 'MaxPracMark' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(721): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(635): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `subject` SET `CID` = \'7\', `SCode` = \'ADCA1\', `SName` = \'Basic\', `SeqNo` = \'1\', `MaxMark` = \'100\', `PassMark` = \'33\', `MaxPracMark` = \'30\', `PassPracMark` = \'10\', `RStatus` = \'1\'
+WHERE `subject`.`ID` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 5 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-12 09:40:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'niceneat', 3306, '', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(120): CodeIgniter\Model->update('5', Array)
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject...', Array, false)
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(853): CodeIgniter\BaseModel->update(Array, Array)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(120): CodeIgniter\Model->update('5', Array)
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2026-03-12 09:40:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: subjectsave]
+in SYSTEMPATH\Database\BaseConnection.php on line 456.
+ 1 SYSTEMPATH\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `subject` SET `CID` = :CID:, `SCode` = :SCode:, `SName` = :SName:, `SeqNo` = :SeqNo:, `MaxMark` = :MaxMark:, `PassMark` = :PassMark:, `MaxPracMark` = :MaxPracMark:, `PassPracMark` = :PassPracMark:, `RStatus` = :RStatus:
+WHERE `subject`.`ID` IN :subject.ID:', [...], false)
+ 3 SYSTEMPATH\Model.php(449): CodeIgniter\Database\BaseBuilder->update()
+ 4 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 5 SYSTEMPATH\Model.php(853): CodeIgniter\BaseModel->update([...], [...])
+ 6 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->update('5', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectsave()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-03-12 09:41:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'niceneat', 3306, '', 0)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(91): CodeIgniter\BaseModel->findAll()
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectadd('5')
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xamp\htdocs\www\Education\resultniceneatcomputer\app\Controllers\Admin.php(91): CodeIgniter\BaseModel->findAll()
+#6 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(933): App\Controllers\Admin->subjectadd('5')
+#7 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 D:\xamp\htdocs\www\Education\resultniceneatcomputer\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\xamp\htdocs\www\Education\resultniceneatcomputer\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-03-12 09:41:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: subjectedit/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 456.
+ 1 SYSTEMPATH\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `coursemaster`
+WHERE `RStatus` = :RStatus:
+ORDER BY `ID` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(274): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Admin.php(91): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->subjectadd('5')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-03-12 09:56:52 --> ErrorException: Undefined variable $sid
+[Method: POST, Route: getmarksheet]
+in APPPATH\Views\result.php on line 16.
+ 1 APPPATH\Views\result.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sid', 'D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php', 16)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\xamp\\htdocs\\www\\Education\\resultniceneatcomputer\\app\\Views\\result.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('result', [], true)
+ 5 APPPATH\Controllers\Home.php(40): view('result', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->getmarksheet()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

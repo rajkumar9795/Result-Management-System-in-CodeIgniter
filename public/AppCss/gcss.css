@@ -1,0 +1,240 @@
+﻿/*
+    ============================
+        Girfa IT Services
+         www.girfa.co.in
+    ============================
+*/
+.g-center{
+    display:block;margin:auto;
+}
+.g-center-inline{
+    display:block;text-align:center;
+}
+.g-mandate{
+    font-weight: bold;
+    color:red;
+}
+#fade {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 200%;
+    background-color: #ababab;
+    z-index: 1151;
+    -moz-opacity: 0.8;
+    opacity: .20;
+    filter: alpha(opacity=80);
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    top: 75%;
+    left: 48%;
+    z-index: 1002;
+    text-align: center;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    /*margin: 10px;*/
+    margin-top: 0px;
+}
+    .fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+.g-form {
+}
+
+    .g-form input[type=text], [type=email], [type=password], [type=number], [type=date], textarea {
+        border: solid #ababab 1px !important;
+        border-radius: 0px;
+        margin-bottom: 10px !important;
+        width: 100%;
+    }
+
+    .g-form select {
+        padding: 2px;
+        border: solid #ababab 1px !important;
+        border-radius: 0px;
+        width: 100%;
+        margin-bottom: 10px !important;
+    }
+
+@media (max-width:700px) {
+    .g-form input {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+}
+
+.g-mandate {
+    font-weight: bold;
+    color: red;
+}
+
+.g-drop-shadow {
+    -webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.75);
+}
+.g-bold {
+    font-weight: bolder;
+}
+
+.g-web-show {
+    display: block;
+}
+
+@media(max-width:700px) {
+    .g-web-show {
+        display: none !important;
+    }
+}
+
+.g-mob-show {
+    display: none;
+}
+
+@media(max-width:700px) {
+    .g-mob-show {
+        display: block !important;
+    }
+}
+
+.g-img-border-radius {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.g-img-padding-border{
+    border:solid 1px #ababab;
+    padding:7px;
+}
+.g-list{
+
+}
+.g-list li{
+    list-style:disc !important;
+    margin-left:5% !important;
+}
+.g-bg-section {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.g-p-border-top-bottom {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    padding : 20px;
+}
+
+.g-font1 {
+    font-family: 'Dosis', sans-serif !important;
+}
+
+.g-font2 {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.g-font3 {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.g-panel-blue{
+    padding: 20px;
+    background-color: #001a39;
+    color:white;
+    margin: 1% !important;
+}
+
+.g-p-justify{
+
+}
+.g-p-justify p {
+	text-align:justify;
+}
+
+.g-border-gradient {
+	border: 5px solid transparent;
+	border-image: linear-gradient(to right, #ff9900,#28166f );
+	border-image-slice: 1;
+}
+
+.g-color-white{
+    color:white !important;
+}
+
+/*========= Image 3d =========*/
+.image-3d-wrapper {
+    perspective: 1000px;
+    display: inline-block;
+}
+
+    .image-3d-wrapper img {
+        width: 300px; /* Adjust as needed */
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        transform-style: preserve-3d;
+        border-radius: 10px;
+    }
+
+    .image-3d-wrapper:hover img {
+        transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+/*========= // Image 3d =========*/
+/*=========  Marksheet =========*/
+ .marksheet-container { padding-right: 1%; padding-left: 1%; margin-right: auto; margin-left: auto; }
+        @media(max-width:700px) {
+            .marksheet-container {
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+        }
+       
+        .border{border:solid 1px black;}
+        .imglogo{display:block;margin:auto;width: 100%;}
+        @media(max-width:700px) {
+            .imglogo {
+                width: 80%;
+            }
+        }
+        .bold{font-weight:bolder;}
+        .border-top{border-top:solid 1px black;}
+        .border-bottom { border-bottom: solid 1px black; }
+        .border-left{border-left:solid 1px black;}
+        .border-right { border-right: solid 1px black; }
+        
+        .padl{padding-left:5px;}
+        .padr { padding-right: 5px; }
+/*========= // Marksheet =========*/
+/*=========  Clipboard copy =========*/
+.copy-text {
+    cursor: pointer;
+}
+
+#copy-tooltip {
+    position: fixed;
+    background: #28a745;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    display: none;
+    z-index: 9999;
+}
+/*========= // Clipboard copy =========*/
